@@ -6,7 +6,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Profile</title>
+    <title>Log In</title>
     <!-- Font Awesome -->
     <link
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -24,17 +24,16 @@
     />
 
     <style>
+        body {
+            background-color: black
+        }
     </style>
   </head>
   <body>
-    <s:include value="menu.jsp" /> 
-
+    <!-- Start your project here-->
     <div class="container">
-      <div class="d-flex align-items-center justify-content-center" style="height: 80vh;">
+      <div class="d-flex align-items-center justify-content-center" style="height: 100vh;">
           <div class="row g-0">
-            <div class="col-md-12 text-center">
-              <h2>User Details</h2>
-            </div>
             <div class="col-md-4">
               <img
                 src="https://cdn.pixabay.com/photo/2021/07/25/08/03/account-6491185_960_720.png"

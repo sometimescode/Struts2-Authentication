@@ -1,52 +1,74 @@
+<!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <title>Register</title>
+    <!-- Font Awesome -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+    href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+    rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.css"
+    rel="stylesheet"
+    />
+
     <style>
-      #formContainer {
-        background-color: #eee;
-        width: 50%;
-        margin: auto;
-        text-align: center;
-        padding: 10px 20px;
-      }
-
-      input {
-        color: #5f5f5f;
-        box-sizing: border-box;
-        width: 290px;
-        box-shadow: 1px 2px 4px 0 rgb(0 0 0 / 8%);
-        padding: 10px;
-        border: 1px solid #dbdbdb;
-        margin: 5px 0px;
-      }
-
-      input[type=submit] {
-        background-color: #6caee0;
-        color: #ffffff;
-        width: 100%;
-        margin-top: 25px;
-        font-weight: bold;
-      }
     </style>
   </head>
   <body>
-    <s:include value="menu.jsp" />
+    <s:include value="menu.jsp" /> 
 
-    <main>
-      <div id="formContainer">
-        <h2>Account Registration</h2>
-        
-        <s:form action="AddUserToDB">
-          <s:textfield name="accountBean.username" label="Username" />
-          <s:textfield name="accountBean.password" label="Password" />
-          <s:textfield name="accountBean.firstName" label="First Name" />
-          <s:textfield name="accountBean.lastName" label="Last Name" />
-          <s:textfield name="accountBean.email" label="Email Address" />
-          <s:submit />
-        </s:form>	
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-center" style="height: 80vh;">
+        <div class="card text-center shadow-5-strong">
+          <div class="card-header fs-5">Account Registration</div>
+          <div class="card-body">
+            <s:form action="AddUserToDB" theme="simple">
+              <div class="form-outline mb-4">
+                <s:textfield key="accountBean.username" placeholder="Username" label="Username" cssClass="form-control"/>
+              </div>
+
+              <div class="form-outline mb-4">
+                <s:textfield key="accountBean.password" placeholder="Password" label="Password" cssClass="form-control"/>
+              </div>
+              <div class="row mb-4">
+                <div class="col">
+                  <div class="form-outline">
+                    <s:textfield key="accountBean.firstName" placeholder="First Name" label="First Name" cssClass="form-control"/>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <s:textfield key="accountBean.lastName" placeholder="Last Name" label="Last Name" cssClass="form-control"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-outline mb-4">
+                <s:textfield key="accountBean.email" placeholder="Email" label="Email" cssClass="form-control"/>
+              </div>
+              
+              <s:submit cssClass="btn btn-primary btn-block mb-4" value="Submit"/>  
+            </s:form>
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
+
+    <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.2.0/mdb.min.js"
+    ></script>
   </body>
 </html>

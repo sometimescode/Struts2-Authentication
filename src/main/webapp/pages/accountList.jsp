@@ -29,6 +29,10 @@
       #verticalList li.errorPink {
         background-color: lightpink;
       }
+
+      main {
+        padding-top: 20px;
+      }
       
     </style>    
   </head>
